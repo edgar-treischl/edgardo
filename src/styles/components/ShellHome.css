@@ -1,0 +1,108 @@
+/* ============================================================================
+   ShellHome Component - Panel and card styling (inspired by reginald)
+   ============================================================================ */
+
+.shell__panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: white;
+}
+
+.shell__panelHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 48px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.shell__panelTitle {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.2;
+}
+
+.shell__panelCopy {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.shell__appGrid {
+  padding: 48px;
+  width: 100%;
+}
+
+.shell__appCard {
+  background-color: white;
+}
+
+.shell__appCardPreview {
+  background-color: #f5f5f5;
+}
+
+.shell__remotePanel {
+  padding: calc(var(--shell-header-height) + 24px) 24px 24px;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .shell__panelHeader {
+    padding: 40px;
+  }
+
+  .shell__panelTitle {
+    font-size: 28px;
+  }
+
+  .shell__panelCopy {
+    font-size: 15px;
+  }
+
+  .shell__appGrid {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shell__panelHeader {
+    padding: 32px;
+  }
+
+  .shell__panelTitle {
+    font-size: 24px;
+  }
+
+  .shell__panelCopy {
+    font-size: 14px;
+  }
+
+  .shell__appGrid {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shell__panelHeader {
+    padding: 24px;
+  }
+
+  .shell__panelTitle {
+    font-size: 20px;
+  }
+
+  .shell__panelCopy {
+    font-size: 13px;
+  }
+
+  .shell__appGrid {
+    padding: 24px;
+  }
+}
