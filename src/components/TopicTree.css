@@ -1,0 +1,11 @@
+.tree-map {
+  height: 400px;
+  width: 100%;
+  min-width: 0;
+}
+
+.chart-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}

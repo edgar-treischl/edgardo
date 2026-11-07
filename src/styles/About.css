@@ -1,0 +1,370 @@
+/* About Page Styles */
+
+/* ============================================================================
+   HERO SECTION - Large intro with avatar on the right
+   ============================================================================ */
+
+.about__heroSection {
+  position: relative;
+  width: 100%;
+  padding: 80px 48px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.about__heroContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about__heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #0f172a;
+}
+
+.about__heroTitle {
+  margin: 0;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #0f172a;
+}
+
+.about__heroSubtitle {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #64748b;
+  opacity: 0.9;
+  max-width: 500px;
+}
+
+.about__cvButton {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #0098d4;
+  border-radius: 6px;
+  color: #0098d4;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  background: transparent;
+  width: fit-content;
+}
+
+.about__cvButton:hover {
+  background: #0098d4;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 152, 212, 0.2);
+}
+
+.about__cvButton:active {
+  transform: scale(0.98);
+}
+
+.about__heroVisual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.about__avatarContainer {
+  max-width: 400px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: grayscale(10%);
+  display: block;
+}
+
+/* ============================================================================
+   About Content Section
+   ============================================================================ */
+
+.about-content-section {
+  padding: 0 48px 48px 48px;
+}
+
+.about-content-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #0f172a;
+}
+
+.about-content-section p {
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.about-content-section p:last-child {
+  margin-bottom: 0;
+}
+
+.page-section {
+  margin-top: 3rem;
+  padding: 0 48px;
+}
+
+.page-section:first-of-type {
+  padding-top: 3rem;
+}
+
+.section-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: #0f172a;
+}
+
+.page-section p {
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.chart-description {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin-top: 1rem;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(148, 163, 184, 0.15);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2rem;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #0098d4;
+  border: 3px solid white;
+  box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.15);
+}
+
+.timeline-content {
+  line-height: 1.6;
+}
+
+.timeline-content strong {
+  color: #0f172a;
+}
+
+.experience-meta {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+}
+
+.experience-list li {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.chevron {
+  color: #0098d4;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* Publications */
+.publication-card {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #f9fafb;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 6px;
+  line-height: 1.7;
+  transition: all 0.2s ease;
+}
+
+.publication-card:hover {
+  border-color: rgba(0, 152, 212, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 152, 212, 0.08);
+}
+
+.publication-card strong {
+  color: #0f172a;
+}
+
+.text-button {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  color: #0098d4;
+  text-decoration: none;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.text-button:hover {
+  background: rgba(0, 152, 212, 0.1);
+  color: #0078a8;
+}
+
+/* Topic tree */
+.topic-tree {
+  margin-top: 2rem;
+}
+
+/* Personal section */
+.personal-section {
+  background: transparent;
+  padding-bottom: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about__heroSection {
+    padding: 60px 40px;
+  }
+
+  .about__heroContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about__heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .about__heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .about__avatarContainer {
+    max-width: 350px;
+  }
+
+  .about-content-section {
+    padding: 0 40px 48px 40px;
+  }
+
+  .page-section {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__heroSection {
+    padding: 60px 24px;
+  }
+
+  .about__heroContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about__heroTitle {
+    font-size: 2rem;
+  }
+
+  .about__heroSubtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .about__avatarContainer {
+    max-width: 300px;
+  }
+
+  .about-content-section {
+    padding: 0 24px 48px 24px;
+  }
+
+  .page-section {
+    padding: 0 24px;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-dot {
+    left: -1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__heroSection {
+    padding: 40px 16px;
+  }
+
+  .about__heroContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .about__heroTitle {
+    font-size: 1.75rem;
+  }
+
+  .about__heroSubtitle {
+    font-size: 0.95rem;
+  }
+
+  .about__avatarContainer {
+    max-width: 200px;
+  }
+
+  .about-content-section {
+    padding: 0 16px 40px 16px;
+  }
+
+  .page-section {
+    padding: 0 16px;
+  }
+}

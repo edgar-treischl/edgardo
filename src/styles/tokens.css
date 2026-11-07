@@ -1,0 +1,177 @@
+/* ============================================================================
+   DESIGN TOKENS - Single Source of Truth
+   All colors, spacing, typography scales, and effects defined here.
+   ============================================================================ */
+
+:root {
+  /* PRIMARY COLORS */
+  --color-primary: #0098d4;
+  --color-primary-dark: #0077a8;
+  --color-primary-light: #66c7e8;
+
+  /* LEGACY ALIASES (for backwards compatibility) */
+  --color-highlight: var(--color-primary);
+  --color-highlight-dark: var(--color-primary-dark);
+  --color-highlight-light: var(--color-primary-light);
+
+  /* NEUTRAL COLORS - SEMANTIC */
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-tertiary: #64748b;
+  --color-text-inverted: #ffffff;
+
+  /* LEGACY ALIASES */
+  --color-dark-text: var(--color-text-primary);
+  --color-medium-text: var(--color-text-primary);
+  --color-light-text: var(--color-text-secondary);
+  --color-light-gray: #94a3b8;
+  --color-slate-text: var(--color-text-secondary);
+  --color-slate-med: var(--color-text-tertiary);
+
+  /* BACKGROUNDS - SEMANTIC */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8fbff;
+  --color-bg-tertiary: #f1f5f9;
+
+  /* LEGACY ALIASES */
+  --color-white-bg: var(--color-bg-primary);
+  --color-very-light-bg: var(--color-bg-secondary);
+  --color-light-bg: var(--color-bg-tertiary);
+  --color-dark-bg: #1e293b;
+  --color-darker-bg: var(--color-text-primary);
+
+  /* BORDERS */
+  --color-border-default: #cbd5e1;
+  --color-input-border: #e2e8f0;
+
+  /* LEGACY ALIASES */
+  --color-border-gray: var(--color-border-default);
+  --color-very-light-blue: #eef4ff;
+  --color-slate-blue: #1e3a8a;
+
+  /* STATUS COLORS */
+  --color-success: #22c55e;
+  --color-success-light: #dcfce7;
+  --color-success-lighter: #bbf7d0;
+  --color-success-dark: #166534;
+  --color-error: #ef4444;
+  --color-error-light: #fee2e2;
+  --color-error-dark: #dc2626;
+  --color-error-darker: #991b1b;
+  --color-warning: #f97316;
+  --color-warning-light: #ffedd5;
+  --color-warning-dark: #9a3412;
+
+  /* APPS/ACCENT COLORS */
+  --color-apps: #9333ea;
+  --color-apps-light: #ede9fe;
+  --color-apps-dark-bg-start: #1e1b4b;
+  --color-apps-dark-bg-end: #312e81;
+  --color-apps-dark-text: #e9d5ff;
+  --color-form-dark-bg-start: #064e3b;
+  --color-form-dark-bg-end: #047857;
+
+  /* GRADIENTS */
+  --gradient-shell-bg: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-bg-tertiary) 100%);
+  --gradient-auth-bg: radial-gradient(
+      circle at top,
+      rgba(0, 152, 212, 0.12),
+      transparent 32%
+    ),
+    linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-very-light-blue) 100%);
+  --gradient-body-bg: radial-gradient(
+    circle at top,
+    var(--color-bg-secondary) 0%,
+    #eef2ff 45%,
+    var(--color-bg-tertiary) 100%
+  );
+  --gradient-panel-bg: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+  --gradient-card-bg: var(--color-bg-primary);
+  --gradient-primary-btn-bg: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  --gradient-primary-btn-bg-hover: linear-gradient(
+    180deg,
+    #1e293b 0%,
+    #334155 100%
+  );
+  --gradient-secondary-btn-bg: linear-gradient(135deg, var(--color-bg-tertiary) 0%, var(--color-input-border) 100%);
+  --gradient-success-bg: linear-gradient(180deg, var(--color-success-light) 0%, var(--color-success-lighter) 100%);
+  --gradient-highlight-bg: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+  --gradient-title: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+
+  /* SHADOWS - 3-LEVEL SYSTEM */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-base: 0 2px 4px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.10);
+  --shadow-lg: 0 12px 24px rgba(15, 23, 42, 0.12);
+  --shadow-xl: 0 20px 45px rgba(15, 23, 42, 0.15);
+  --shadow-xxl: 0 14px 24px rgba(15, 23, 42, 0.18);
+  --shadow-xxxl: 0 18px 32px rgba(15, 23, 42, 0.24);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+  /* BORDERS */
+  --border-soft: 1px solid rgba(148, 163, 184, 0.15);
+  --border-medium: 1px solid rgba(148, 163, 184, 0.20);
+  --border-light: 1px solid rgba(148, 163, 184, 0.10);
+
+  /* SPACING SCALE */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+  --space-xxl: 24px;
+  --space-xxxl: 32px;
+  --space-section: 48px;
+
+  /* BORDER RADIUS */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-xxl: 28px;
+  --radius-full: 999px;
+
+  /* TRANSITIONS */
+  --transition-fast: 140ms ease;
+  --transition-base: 180ms ease;
+  --transition-slow: 300ms ease-out;
+
+  /* TYPOGRAPHY - FONT FAMILIES
+     These are the single source of truth for all fonts in the app.
+     See src/styles/fonts.ts for the actual font definitions. */
+  --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-highlight: 'Playfair Display', serif;
+
+  /* FONT SIZES SCALE - SIMPLIFIED */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 1.875rem;
+  --fs-2xl: 2.25rem;
+  --fs-3xl: 3rem;
+
+  /* LEGACY ALIASES - For backwards compatibility */
+  --fs-xs-alt: 0.8rem;
+  --fs-sm-alt: 0.85rem;
+  --fs-sm-alt2: 0.92rem;
+  --fs-sm-md: 0.9rem;
+  --fs-sm-md-alt: 0.95rem;
+  --fs-md-sm: 1.05rem;
+  --fs-md-alt: 1.125rem;
+  --fs-md-lg: 1.2rem;
+  --fs-lg-sm: 1.3rem;
+  --fs-lg-alt: 1.7rem;
+  --fs-4xl: 2.8rem;
+  --fs-5xl: 3rem;
+  --fs-6xl: 3.5rem;
+  --fs-8xl: 5.5rem;
+
+  /* RESPONSIVE FONT SIZES (using clamp) */
+  --fs-responsive-lg: clamp(1.5rem, 3vw, 2rem);
+  --fs-responsive-xl: clamp(2rem, 2vw, 2rem);
+  --fs-responsive-2xl: clamp(2rem, 4vw, 3rem);
+  --fs-responsive-6xl: clamp(4.5rem, 4vw, 3rem);
+}
