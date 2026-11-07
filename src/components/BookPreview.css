@@ -1,0 +1,131 @@
+
+.books-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.books-page__heading {
+  margin-bottom: 36px;
+}
+
+.books-page__heading h1 {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: #222;
+}
+
+.books-page__heading p {
+  color: #777;
+  font-size: 15px;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.book-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  color: #222;
+  min-width: 0;
+}
+
+.book-preview__cover {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.book-preview__cover img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+
+.book-preview__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.book-preview__label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #888;
+}
+
+.book-preview h2 {
+  margin: 12px 0 6px;
+  font-size: 24px;
+  letter-spacing: -.5px;
+}
+
+.book-preview__subtitle {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.book-preview__meta {
+  margin: 12px 0 24px;
+  color: #888;
+  font-size: 12px;
+}
+
+.book-preview__summary h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.book-preview__summary p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.book-preview__details {
+  margin-top: 16px;
+  color: #777;
+  font-size: 13px;
+}
+
+.book-preview__button {
+  display: inline-flex;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 12px 18px;
+  border-radius: 6px;
+  background: #222;
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+
+.book-preview__button:hover {
+  background: #444;
+}
+
+@media (max-width: 700px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .books-page {
+    padding: 28px 16px;
+  }
+}

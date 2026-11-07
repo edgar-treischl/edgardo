@@ -3,6 +3,7 @@ import './src/styles/tokens.css';
 import './src/styles/global.css';
 import './src/components/MinimalShell.css';
 import About from './src/pages/About';
+import Books from './src/pages/Books';
 import { AppsPage } from './src/pages/AppsPage';
 import { appRegistry } from './src/platform/appRegistry';
 import { ErrorBoundary } from './src/components/ErrorBoundary';
@@ -13,7 +14,7 @@ interface UserProfile {
   role: string;
 }
 
-type CurrentPage = 'about' | 'apps';
+type CurrentPage = 'about' | 'apps' | 'books';
 
 const federatedApps = appRegistry.map(entry => ({
   entry,
@@ -69,6 +70,12 @@ export default function App() {
               About
             </button>
             <button
+              className={`shell__nav-item ${currentPage === 'books' ? 'shell__nav-item--active' : ''}`}
+              onClick={() => navigateToPage('books')}
+            >
+              Books
+            </button>
+            <button
               className={`shell__nav-item ${currentPage === 'apps' ? 'shell__nav-item--active' : ''}`}
               onClick={() => navigateToPage('apps')}
             >
@@ -101,6 +108,7 @@ export default function App() {
       {/* Main Content Area */}
       <main className="shell__content-area">
         {currentPage === 'about' && <About />}
+        {currentPage === 'books' && <Books />}
         {currentPage === 'apps' && !activeApp && (
           <AppsPage apps={appRegistry} onLoadApp={handleLoadApp} />
         )}
