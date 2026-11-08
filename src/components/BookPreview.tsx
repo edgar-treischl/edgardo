@@ -28,10 +28,10 @@ export default function BookPreview({ book }: BookPreviewProps) {
 
       <div className="book-preview__content">
         <span className="book-preview__label">
-          PUBLISHED BOOK
+          PUBLISHED WORK
         </span>
 
-        <h2>{book.title}</h2>
+        <h2 className="book-preview__title">{book.title}</h2>
 
         {book.subtitle && (
           <p className="book-preview__subtitle">
@@ -46,7 +46,7 @@ export default function BookPreview({ book }: BookPreviewProps) {
         </p>
 
         <div className="book-preview__summary">
-          <h3>About this book</h3>
+          <h3>About</h3>
           <p>{book.summary}</p>
         </div>
 
@@ -63,7 +63,7 @@ export default function BookPreview({ book }: BookPreviewProps) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Purchase book <span>↗</span>
+            Purchase <span aria-hidden="true">→</span>
           </a>
         )}
       </div>

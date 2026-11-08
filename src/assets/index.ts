@@ -1,10 +1,12 @@
 // Centralized asset imports
 
 // Icon components
-export { AppsIcon } from './icons';
+export { AppsIcon, GithubIcon, GoogleScholarIcon, LinkedInIcon, PdfIcon } from './icons';
 
 // Core app assets
 export { default as AVATAR_IMAGE } from './avatar.webp';
+export { default as CIRCLE_IMAGE } from './circles.png';
+
 
 // Demo/page hero images
 export { default as GETTING_STARTED_HERO } from './hero.png';

@@ -1,5 +1,5 @@
 import BookPreview from '../components/BookPreview';
-import '../styles/Books.css';
+import './Books.css';
 
 interface Book {
   title: string;
@@ -36,17 +36,19 @@ const books: Book[] = [
 
 export default function Books() {
   return (
-    <main className="books-page">
-      <header className="books-page__heading">
-        <h1>My Published Books</h1>
-        <p>Discover my published works.</p>
-      </header>
+    <div className="shell__panel books-panel">
+      <section className="books__section">
+        <div className="books__header">
+          <h1 className="books__title">My Published Books</h1>
+          <p className="books__subtitle">Discover my published works and research contributions.</p>
+        </div>
 
-      <section className="books-grid">
-        {books.map((book, index) => (
-          <BookPreview key={index} book={book} />
-        ))}
+        <div className="books__grid">
+          {books.map((book, index) => (
+            <BookPreview key={index} book={book} />
+          ))}
+        </div>
       </section>
-    </main>
+    </div>
   );
 }

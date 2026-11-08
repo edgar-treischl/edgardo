@@ -2,11 +2,13 @@ import { lazy, Suspense, useState } from 'react';
 import './src/styles/tokens.css';
 import './src/styles/global.css';
 import './src/components/MinimalShell.css';
+import Home from './src/pages/Home';
 import About from './src/pages/About';
 import Books from './src/pages/Books';
 import { AppsPage } from './src/pages/AppsPage';
 import { appRegistry } from './src/platform/appRegistry';
 import { ErrorBoundary } from './src/components/ErrorBoundary';
+
 
 interface UserProfile {
   initials: string;
@@ -14,7 +16,7 @@ interface UserProfile {
   role: string;
 }
 
-type CurrentPage = 'about' | 'apps' | 'books';
+type CurrentPage = 'home' | 'about' | 'apps' | 'books';
 
 const federatedApps = appRegistry.map(entry => ({
   entry,
@@ -28,7 +30,7 @@ export default function App() {
     role: 'Data Scientist',
   });
 
-  const [currentPage, setCurrentPage] = useState<CurrentPage>('about');
+  const [currentPage, setCurrentPage] = useState<CurrentPage>('home');
   const [activeApp, setActiveApp] = useState<(typeof federatedApps)[number] | null>(null);
 
   const navigateToPage = (page: CurrentPage) => {
@@ -55,11 +57,15 @@ export default function App() {
       {/* Minimal Header - inspired by reginald's ShellHeader */}
       <header className="shell__header">
         <div className="shell__header-inner">
-          {/* Logo/Brand */}
-          <div className="shell__brand">
+          {/* Logo/Brand - clickable to go home */}
+          <button
+            className="shell__brand"
+            onClick={() => navigateToPage('home')}
+            title="Home"
+          >
             <div className="shell__brand-icon">E</div>
             <span className="shell__brand-text">edgardo</span>
-          </div>
+          </button>
 
           {/* Navigation */}
           <nav className="shell__nav">
@@ -107,6 +113,7 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="shell__content-area">
+        {currentPage === 'home' && <Home onNavigate={navigateToPage} />}
         {currentPage === 'about' && <About />}
         {currentPage === 'books' && <Books />}
         {currentPage === 'apps' && !activeApp && (

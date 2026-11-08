@@ -1,0 +1,105 @@
+/* ============================================================================
+   BOOKS PAGE - Published Works Showcase
+   Matches the overall app design system with consistent spacing and styling
+   ============================================================================ */
+
+.books-panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--color-bg-primary);
+}
+
+/* ============================================================================
+   SECTION CONTAINER
+   ============================================================================ */
+
+.books__section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-section) var(--space-xxxl);
+}
+
+/* ============================================================================
+   HEADER - Title and Description
+   ============================================================================ */
+
+.books__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-section);
+}
+
+.books__title {
+  margin: 0;
+  font-size: var(--fs-3xl);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-dark-text);
+  font-family: var(--font-system);
+  letter-spacing: -0.5px;
+}
+
+.books__subtitle {
+  margin: 0;
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--color-light-text);
+  font-weight: 400;
+}
+
+/* ============================================================================
+   GRID LAYOUT - Book Cards
+   ============================================================================ */
+
+.books__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-xxl);
+  width: 100%;
+}
+
+/* ============================================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================================ */
+
+@media (max-width: 1200px) {
+  .books__section {
+    padding: var(--space-section) var(--space-xxl);
+  }
+}
+
+@media (max-width: 768px) {
+  .books__section {
+    padding: calc(var(--space-section) * 0.75) var(--space-xxl);
+  }
+
+  .books__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .books__subtitle {
+    font-size: var(--fs-sm);
+  }
+
+  .books__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .books__section {
+    padding: var(--space-xxl) var(--space-lg);
+  }
+
+  .books__title {
+    font-size: var(--fs-xl);
+  }
+
+  .books__grid {
+    gap: var(--space-lg);
+  }
+}
