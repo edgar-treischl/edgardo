@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react';
 import type { ReactNode } from 'react';
-import '../styles/About.css';
 import LanguageBar from '../components/LanguageBar';
 import TopicTree from '../components/TopicTree';
 import { AVATAR_IMAGE } from '../assets';
+import './About.css';
 
 const items = [
   'Development of a dynamic, automated reporting system for evaluations in Bavaria',
@@ -24,6 +24,9 @@ const itemsPL = [
 
 const cvUrl = `${import.meta.env.BASE_URL}CV_Treischl.pdf`;
 
+/**
+ * React replacement for the Vue v-fade directive.
+ */
 function FadeIn({ children, className = '' }: { children: ReactNode; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -99,9 +102,13 @@ function ExperienceItem({ title, company, years, items }: ExperienceItemProps) {
 
 export default function About() {
   return (
-    <div className="about-page">
-      {/* Hero Section */}
-      <section className="about__heroSection">
+    <div className="shell__panel about-panel">
+
+        {/* ===================== */}
+        {/* Hero Section */}
+        {/* ===================== */}
+
+        <section className="about__heroSection">
         <div className="about__heroContainer">
           <div className="about__heroContent">
             <h1 className="about__heroTitle">
@@ -128,7 +135,10 @@ export default function About() {
         </div>
       </section>
 
+      {/* ===================== */}
       {/* About Me Content */}
+      {/* ===================== */}
+
       <FadeIn className="page-section about-content-section">
         <h2 className="section-heading">About Me</h2>
 
@@ -156,9 +166,14 @@ export default function About() {
         </p>
       </FadeIn>
 
+      {/* ===================== */}
       {/* Experience */}
+      {/* ===================== */}
+
       <FadeIn className="page-section">
-        <h2 className="section-heading">Professional Experience</h2>
+        <h2 className="section-heading">
+          Professional Experience
+        </h2>
 
         <div className="timeline">
           <ExperienceItem
@@ -184,9 +199,14 @@ export default function About() {
         </div>
       </FadeIn>
 
+      {/* ===================== */}
       {/* Publications */}
+      {/* ===================== */}
+
       <FadeIn className="page-section">
-        <h2 className="section-heading">Selected Publications & Projects</h2>
+        <h2 className="section-heading">
+          Selected Publications & Projects
+        </h2>
 
         <div className="publication-card">
           <div>
@@ -223,9 +243,14 @@ export default function About() {
         </div>
       </FadeIn>
 
+      {/* ===================== */}
       {/* Skills & Tools */}
+      {/* ===================== */}
+
       <FadeIn className="page-section">
-        <h2 className="section-heading">Skills & Tools</h2>
+        <h2 className="section-heading">
+          Skills & Tools
+        </h2>
 
         <p>
           To give a transparent overview of my work, I analyzed my
@@ -254,9 +279,14 @@ export default function About() {
         </div>
       </FadeIn>
 
+      {/* ===================== */}
       {/* Personal Note */}
+      {/* ===================== */}
+
       <FadeIn className="page-section personal-section">
-        <h2 className="section-heading">Beyond Research</h2>
+        <h2 className="section-heading">
+          Beyond Research
+        </h2>
 
         <p>
           Outside of research, I enjoy jogging, swimming, and biking.
@@ -264,6 +294,7 @@ export default function About() {
           space for new ideas to emerge.
         </p>
       </FadeIn>
-    </div>
-  );
+
+      </div>
+    )
 }
